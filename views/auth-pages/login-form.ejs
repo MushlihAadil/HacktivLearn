@@ -1,0 +1,38 @@
+<%- include('partials/navbar.ejs', {pageTitle : 'Login' }) %>
+
+    <div id="outerDiv">
+
+        <h1>Login</h1>
+        <br>
+        <br>
+        <h3>Enter details below to login</h3>
+        <br>
+        <br>
+        <p>Or if you don't have account yet,</p>
+        <p>click <a href="/register">here</a> to register</p>
+
+        <% if(errors) { %>
+            <br>
+            <p style="color: red;">
+                <%= errors %>
+            </p>
+            <br>
+            <% } %>
+
+                <form action="/login" method="post" class="formOuter">
+                    <div>
+                        <label for="title">Username</label><br>
+                        <input type="text" name="username" id="">
+                    </div>
+                    <div>
+                        <label for="title">Password</label><br>
+                        <input type="password" name="password" id="">
+                    </div>
+                    <button type="submit" id="submitButton">Submit</button>
+                </form>
+
+    </div>
+
+    </body>
+
+    </html>

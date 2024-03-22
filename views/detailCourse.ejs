@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        :root {
+            --primary-color: #5c48ee;
+            --secondary-color-dark: #0f1e6a;
+            --secondary-color: #f9fafe;
+            --text-color: #333333;
+            --white: #ffffff;
+            --max-width: 1200px
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppin', sans-serif;
+            background-color: var(--secondary-color);
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: .3s;
+        }
+
+        .navbar-logo:link {
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .link a {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 750;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: var(--primary-color);
+        }
+
+        .link .navbar-btn {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .link .navbar-btn:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
+        .img-top {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3rem;
+            border-radius: 10px;
+            height: 360px;
+            width: 640px;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .text-top {
+            position: absolute;
+            width: 100%;
+            max-width: 600px;
+            left: 30.5%;
+            top: 57.5%;
+            transform: translate(50% 50%);
+            background: linear-gradient(to left,
+                    var(--primary-color),
+                    var(--secondary-color-dark));
+            color: var(--white);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            font-family: 'Poppin', sans-serif;
+            font-size: 20px;
+            margin-top: 10vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th,
+        td {
+            color: var(--text-color);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+            border-bottom: 1px solid;
+            text-align: center;
+        }
+
+        .btn-details .detail-link {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-details .detail-link:hover {
+            background-color: var(--secondary-color-dark);
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktiv Learn</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-logo"><a href="/"> HacktivLearn </a></div>
+        <ul class="navbar-links">
+            <li class="link"><a href="/"> Home </a></li>
+            <li class="link"><a href="/categories"> Category </a></li>
+            <li class="link"><a href="/courses"> Courses </a></li>
+            <li class="link"><a href="/logout" class="navbar-btn"> Log Out </a></li>
+        </ul>
+    </nav>
+    <div>
+        <% if (data.Category.id===1) { %>
+            <img class="img-top" src="https://dailytimes.com.pk/assets/uploads/2017/11/10/information-technology.jpg"
+                alt="header">
+            <p class="text-top"> Learn computer science and programming, with the practice-based learning program with
+                Hacktiv Learn </p>
+            <% } else if (data.Category.id===2) { %>
+                <img class="img-top"
+                    src="https://arizent.brightspotcdn.com/dims4/default/649561c/2147483647/strip/true/crop/5500x3095+0+0/resize/1024x576!/format/webp/quality/90/?url=https%3A%2F%2Fsource-media-brightspot.s3.us-east-1.amazonaws.com%2Ff2%2F23%2Fca26bbc6435a8fe926635663fbfb%2Fadobestock-49914397.jpeg"
+                    alt="header">
+                <p class="text-top"> Learn about business management based on developing business trends. Come on,
+                    master it by learning at Hacktiv Learn </p>
+                <% } else if (data.Category.id===3) { %>
+                    <img class="img-top"
+                        src="https://www.shrm.org/executive-network/insights/people-strategy/values-based-leadership-transformation-health-care/_jcr_content/_cq_featuredimage.coreimg.jpeg/1702834135954/istock-927897070-xz0em1.jpeg"
+                        alt="header">
+                    <p class="text-top"> Learn about health fields such as medicine, nursing, nutrition more easily and
+                        interactively. Come learn together at Hactiv Learn </p>
+                    <% } %>
+                        <br><br>
+    </div>
+    <table>
+
+        <tr>
+            <th> Course Name </th>
+            <td>
+                <%= data.name %>
+            </td>
+        </tr>
+        <tr>
+            <th> Description </th>
+            <td>
+                <%= data.description %>
+            </td>
+        </tr>
+        <tr>
+            <th> Duration Course </th>
+            <td>
+                <%= convert(data.duration) %>
+            </td>
+        </tr>
+        <tr>
+            <th> Category </th>
+            <td>
+                <%= data.Category.name %>
+            </td>
+        </tr>
+        <tr>
+            <th> Edit Duration </th>
+            <td>
+                <buttom class="btn-details"><a class="detail-link" href="/courses/<%= data.id %>/edit"> Edit </a>
+                </buttom>
+            </td>
+        </tr>
+
+    </table>
+    <div>
+
+    </div>
+</body>
+
+</html>

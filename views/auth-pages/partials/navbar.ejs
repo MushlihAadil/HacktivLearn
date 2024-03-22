@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        :root {
+            --primary-color: #5c48ee;
+            --secondary-color-dark: #0f1e6a;
+            --secondary-color: #f9fafe;
+            --text-color: #333333;
+            --white: #ffffff;
+            --max-width: 1200px
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppin', sans-serif;
+            background-color: var(--secondary-color);
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: .3s;
+        }
+
+        .navbar-logo:link {
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .link a {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 750;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: var(--primary-color);
+        }
+
+        .link .navbar-btn {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .link .navbar-btn:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
+        table {
+            font-family: 'Poppin', sans-serif;
+            font-size: 20px;
+            margin-top: 10vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th {
+            color: var(--primary-color);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+            border-bottom: 1px solid;
+            border-top: 1px solid;
+        }
+
+        td {
+            color: var(--text-color);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+            border-bottom: 1px solid;
+        }
+
+        .btn-details .detail-link {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-details .detail-link:hover {
+            background-color: var(--secondary-color-dark);
+            text-decoration: none;
+        }
+
+        #outerDiv {
+            text-align: center;
+            margin: 8%;
+
+
+        }
+
+        #submitButton {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            transition: 0.3s;
+
+        }
+
+        #submitButton:hover {
+            background-color: var(--secondary-color-dark);
+            cursor: pointer;
+        }
+
+        .formOuter div {
+            margin: 30px;
+        }
+
+        .formOuter div input {
+            width: 20%;
+            height: 25px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-logo"><a href="/"> HacktivLearn </a></div>
+        <ul class="navbar-links">
+            <li class="link"><a href="/"> Home </a></li>
+            <li class="link"><a href="/categories"> Category </a></li>
+            <li class="link"><a href="/courses"> Courses </a></li>
+            <li class="link"><a href="/profiles"> Profile </a></li>
+            <li class="link"><a href="/login" class="navbar-btn"> Login </a></li>
+        </ul>
+    </nav>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        :root {
+            --primary-color: #5c48ee;
+            --secondary-color-dark: #0f1e6a;
+            --secondary-color: #f9fafe;
+            --text-color: #333333;
+            --white: #ffffff;
+            --max-width: 1200px
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppin', sans-serif;
+            background-color: var(--secondary-color);
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: .3s;
+        }
+
+        .navbar-logo:link {
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .link a {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 750;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: var(--primary-color);
+        }
+
+        .link .navbar-btn {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .link .navbar-btn:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            min-height: calc(100vh - 100px);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5rem;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-container h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 3.5rem;
+            color: var(--secondary-color-dark);
+            margin-bottom: 1rem;
+        }
+
+        .heading-1 {
+            font-weight: 700;
+        }
+
+        .heading-2 {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .content-container p {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .image_container {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            place-content: center;
+        }
+
+        .image_container img {
+            width: 120%;
+            max-width: 375px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .image_container img:nth-child(1) {
+            transform: translateY(50px);
+        }
+
+        .image_container img:nth-child(2) {
+            transform: translateY(-10px);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktiv Learn</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-logo"><a href="/"> HacktivLearn </a></div>
+        <ul class="navbar-links">
+            <li class="link"><a href="/"> Home </a></li>
+            <li class="link"><a href="/categories"> Category </a></li>
+            <li class="link"><a href="/courses"> Courses </a></li>
+            <li class="link"><a href="/profiles"> Profile </a></li>
+            <li class="link"><a href="/login" class="navbar-btn"> Login </a></li>
+        </ul>
+    </nav>
+    <section class="container">
+        <div class="content-container">
+            <h1>
+                HacktivLearn <br>
+                <span class="heading-1"> Educational Platform </span> <br>
+                <span class="heading-2"> in The World </span>
+            </h1>
+            <p>
+                HacktivLearn is an educational platform that helps you to learn everything in the world.
+                This platform helps you to learn effectively by immersive learning environments that combines
+                interactive lessons, virtual classrooms, and 1-on-1 learning. Open your horizons of knowledge
+                from now with Us!
+            </p>
+        </div>
+        <div class="image_container">
+            <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?cs=srgb&dl=pexels-julia-m-cameron-4145190.jpg&fm=jpg"
+                alt="header">
+            <img src="https://images.pexels.com/photos/6517078/pexels-photo-6517078.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="header">
+        </div>
+    </section>
+</body>
+
+</html>

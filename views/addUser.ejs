@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        :root {
+            --primary-color: #5c48ee;
+            --secondary-color-dark: #0f1e6a;
+            --secondary-color: #f9fafe;
+            --text-color: #333333;
+            --white: #ffffff;
+            --max-width: 1200px
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppin', sans-serif;
+            background-color: var(--secondary-color);
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: .3s;
+        }
+
+        .navbar-logo:link {
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .link a {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 750;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: var(--primary-color);
+        }
+
+        .link .navbar-btn {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .link .navbar-btn:hover {
+            background-color: var(--secondary-color-dark);
+        }
+
+        .text-top {
+            position: absolute;
+            width: 100%;
+            max-width: 600px;
+            left: 30.5%;
+            top: 15%;
+            transform: translate(50% 50%);
+            background: linear-gradient(to left,
+                    var(--primary-color),
+                    var(--secondary-color-dark));
+            color: var(--white);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            font-family: 'Poppin', sans-serif;
+            font-size: 20px;
+            margin-top: 17.5vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th,
+        td {
+            color: var(--text-color);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+            border-bottom: 1px solid;
+            text-align: center;
+        }
+
+        .btn-details {
+            padding: .5rem 2rem;
+            color: var(--white);
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+
+        .btn-details:hover {
+            background-color: var(--secondary-color-dark);
+            text-decoration: none;
+        }
+
+        .input-text {
+            height: 40px;
+            width: 250px;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 0.25%;
+        }
+
+        .input-selection {
+            height: 40px;
+            width: 250px;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 0.25%;
+            padding: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktiv Learn</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-logo"><a href="/"> HacktivLearn </a></div>
+        <ul class="navbar-links">
+            <li class="link"><a href="/"> Home </a></li>
+            <li class="link"><a href="/categories"> Category </a></li>
+            <li class="link"><a href="/courses"> Courses </a></li>
+            <li class="link"><a href="/profiles"> Profile </a></li>
+            <li class="link"><a href="/logout" class="navbar-btn"> Log Out </a></li>
+        </ul>
+    </nav>
+    <div>
+        <p class="text-top"> "There are no shortcuts to places worth going" <br><br> Beverly Sills </p>
+        <br><br>
+    </div>
+    <form action="/profiles/add" method="post">
+        <table>
+            <tr>
+                <th> Full Name </th>
+                <td> <input class="input-text" type="text" name="fullName"> </td>
+            </tr>
+            <tr>
+                <th> Gender </th>
+                <td>
+                    <select class="input-text" name="gender">
+                        <option selected>Male</option>
+                        <option>Female</option>
+                </td>
+            </tr>
+            <tr>
+                <th> Username </th>
+                <td> <input class="input-text" type="text" name="username"> </td>
+            </tr>
+            <tr>
+                <th> Email </th>
+                <td> <input class="input-text" type="email" name="email"> </td>
+                <%= %>
+            </tr>
+            <tr>
+                <th> Password </th>
+                <td> <input class="input-text" type="password" name="password"> </td>
+            </tr>
+            <tr>
+                <th> role </th>
+                <td> <input class="input-text" type="text" name="role"> </td>
+            </tr>
+            <tr>
+                <th> Add new user ? </th>
+                <td> <button class="btn-details" type="subnit"> Add </buttom>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

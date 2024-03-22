@@ -1,0 +1,50 @@
+<%- include('partials/navbar.ejs', {pageTitle : 'Register' }) %>
+
+    <div id="outerDiv">
+
+        <h1>Register Account</h1>
+        <br>
+        <h3>Fill in details below to register</h3>
+        <br>
+        <br>
+        <p>Or if you already have an account,</p>
+        <p>click <a href="/login">here</a> to Login</p>
+        <br>
+        <br>
+
+        <form action="/register" method="post" class="formOuter">
+            <div>
+                <label for="title">Username</label><br>
+                <input type="text" name="username" id="" placeholder="Ex: aria123">
+            </div>
+            <div>
+                <label for="title">Email</label><br>
+                <input type="text" name="email" id="" placeholder="Ex: aria123@examplemail.com">
+            </div>
+            <div>
+                <label for="title">Password</label><br>
+                <input type="password" name="password" id="" placeholder="Use a strong combination password">
+            </div>
+            <div>
+                <label for="title">Full Name</label><br>
+                <input type="text" name="fullName" id="" placeholder="Ex: Aria Rose">
+            </div>
+            <div>
+                <label for="title">Role</label><br>
+                <input type="text" name="role" id="" placeholder="Ex: admin / student">
+            </div>
+            <div>
+                <label for="title">Gender</label><br>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <button type="submit" id="submitButton">Submit</button>
+
+        </form>
+
+    </div>
+    </body>
+
+    </html>

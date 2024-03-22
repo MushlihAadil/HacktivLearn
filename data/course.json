@@ -1,0 +1,45 @@
+[
+    {
+        "id":1,
+        "name":"Fullstack Javascript",
+        "description":"Developing both client and server software",
+        "duration": 60,
+        "CategoryId":1
+        
+    },
+    {
+        "id":2,
+        "name":"UI-UX Designer",
+        "description":"Increasing usability, accessibility, and enjoyment associated with products in a way that is engaging and convenient for users",
+        "duration":120,
+        "CategoryId":1
+    },
+    {
+        "id":3,
+        "name":"Digital Marketing",
+        "description":"Promoting of brands to connect with potential customers using the internet and other forms of digital communication",
+        "duration":60,
+        "CategoryId":2
+    },
+    {
+        "id":4,
+        "name":"Data Science",
+        "description":"Overseeing data systems and reporting frameworks, guaranteeing the integrity and precision of data",
+        "duration":120,
+        "CategoryId":2
+    },
+    {
+        "id":5,
+        "name":"Nursing",
+        "description":"Promoting of health, prevention of illness, and the care of ill, disabled and dying people",
+        "duration":60,
+        "CategoryId":3
+    },
+    {
+        "id":6,
+        "name":"Nutrition",
+        "description":"Drowning and submersion due to unspecified watercraft sinking, sequela",
+        "duration":120,
+        "CategoryId":3
+    }
+]
